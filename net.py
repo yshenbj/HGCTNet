@@ -252,7 +252,7 @@ class HGCTNet(nn.Module):
         )
         
         # AdditiveAttention
-        self.cnn_attention = AdditiveAttention(key_size = 111, query_size = 47, num_hiddens = num_hid)
+        self.cnn_attention = AdditiveAttention(key_size = 111, query_size = 19, num_hiddens = num_hid)
         
         self.avgpool = nn.AdaptiveAvgPool1d(1)
         self.conv1x1 = conv1x1(in_planes=11, out_planes=1) 
