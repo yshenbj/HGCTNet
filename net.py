@@ -269,9 +269,9 @@ class HGCTNet(nn.Module):
             self._initialize_weights()
 
     def forward(self, x, feas):
-        basebp = feas[:,0:2]
-        demos = feas[:,2:6]
-        hand_feas = feas[:,6:53]
+        basebp = feas[:,10:12]
+        demos = feas[:,0:10]
+        hand_feas = feas[:,12:31]
 
         # CNN module
         x_s = self.cnn(x)
